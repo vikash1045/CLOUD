@@ -1,0 +1,63 @@
+
+
+      "JENKINS NOTES"
+
+
+Jenkins download
+Step 1:
+ use pull image command:
+     ( docker pull jenkins/jenkins:lts-jdk17 )
+Run command:
+     (docker run -d -p 12345:8080 (imageid))
+
+-->Then open localhost copy that path
+ 
+Docker exec (container id) cat (copy path in localhoast)
+
+Then open and create an account for jenkins
+Singnup and login 
+  └──  open the jenkins 
+
+This is page of jenkins     
+
+
+Put a name of build 
+environments 
+   └──  build shell
+
+
+Open command page 
+Put :
+     (echo "welcome our page")
+
+
+TRIGGER CONCEPTS :
+
+  create new item
+             └──  name
+             └──  trigger
+                          └──  trigger  builds remotely put token name and copy the URL
+                          └──  "✅tik"  the build periodically
+                                             └──  input (* * * * *)   and save
+Edit the URL, change the token name and remove the (JENKINS_URL)
+JENKINS_URL/job/mumbai/build?token=TOKEN_NAME or /buildWithParameters?token=TOKEN_NAME
+ 
+EDITED:
+      
+/job/mumbai/build?token=TOKEN_NAME or /buildWithParameters?token=viku
+  
+                                                       
+
+Build step option :
+            └── shell execute
+                      └──  put echo "hey this viku" and save
+ click the  (build now) 
+               └── you can show the final output               
+
+                                  
+    
+
+
+         
+     
+

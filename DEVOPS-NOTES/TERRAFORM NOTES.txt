@@ -1,0 +1,24 @@
+
+     "TERRAFORM NOTES"
+
+Use only ubuntu
+
+
+#Create folder terraform
+Step 1:
+        terraform/
+            └── main.tf
+
+Commands: (mkdir terraform && cd terraform  -->  nano main.tf)
+
+Step 2:
+Nano main.tf /
+             └── (ask chatgpt for code, about ec2,vpc,s3,…)
+
+Step 3:
+        commands
+              ---> terraform init 
+              --->terraform plan
+              --->terraform apply
+
+Delete command: (destroy terrafom)

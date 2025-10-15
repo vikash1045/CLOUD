@@ -1,0 +1,44 @@
+      "DOCKER NOTES"
+
+(use powershell)
+
+Command lines :
+  check  :          # docker --version
+
+Step 1:
+ commanad :         # notepad Dockerfile
+
+ 
+Copy this in notepad
+______________________________________
+# Use official Ubuntu as the base image
+FROM ubuntu:22.04
+
+# Install Apache2
+RUN apt-get update && \
+   apt-get install apache2 -y
+
+# Copy your static HTML page (optional)
+# Uncomment the line below if you have index.html in the same folder
+# COPY index.html /var/www/html/
+
+# Expose port 80
+EXPOSE 80
+
+# Start Apache in foreground
+CMD ["apachectl", "-D", "FOREGROUND"]     
+________________________________________
+
+Must change this
+ rename command  : Rename-Item -Path "dockerfile.txt" -NewName "Dockerfile"
+
+Step 2 :
+  command :      docker build -t [image name] .
+
+Step 3 :  container run command:
+  docker run -d --name [container name] -p [any port]:80 -v [file path]:/var/www/html [image name]
+
+Example:
+  docker run -d --name viku -p 8888:80 -v /c/Users/Madhusri/Desktop/Docker:/var/www/html vikash
+
+check ip address- you can show the output

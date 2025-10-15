@@ -1,0 +1,47 @@
+           "KUBERNETES NOTES"
+
+via (docker)
+ 
+Open power shell (or) ubuntu  
+
+Step 1:
+
+INSTALL COMMANDS: 
+    kubectl install
+         └──  curl.exe -LO https://dl.k8s.io/release/v1.32.0/bin/windows/amd64/kubectl.exe
+  Minikube install
+          └── New-Item -Path 'c:\' -Name 'minikube' -ItemType Directory -Force
+
+[Check]
+      └── minikube version
+
+STEP 2
+START MINIKUBE CLUSTER
+
+   └── minikube start
+       └──  minikube status  (check all running)
+         └──  minikube dashboard
+              └──  kubectl get nodes   --à 
+It should show 1 node running.
+
+Step 3:
+1. Create a Deployment for Nginx:
+    # kubectl create deployment nginx --image=nginx
+2. Expose the Nginx Deployment as a LoadBalancer service:
+    # kubectl expose deployment nginx --type=LoadBalancer --port=80
+3. Access the deployed Nginx application:
+    # minikube service nginx
+This will open the application in your browser
+
+STOP OR DELETE MINIKUBE
+Stop Minikube
+    # minikube stop
+Delete Minikube (Reset the cluster)
+    # minikube delete
+ 
+
+
+
+
+
+
